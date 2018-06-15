@@ -15,7 +15,7 @@ export type CancelIdleCallback = (id: number) => void;
 const ctx: any = window || global;
 
 export const requestIdleCallback: RequestIdleCallback = ctx.requestIdleCallback || requestIdleCallbackShim;
-export const cancelIdleCallback: (id: number) => void = ctx.cancelIdleCallback || ctx.clearTimeout;
+export const cancelIdleCallback: CancelIdleCallback = ctx.cancelIdleCallback || ctx.clearTimeout;
 
 function requestIdleCallbackShim(callback: IdleCallback): number {
     const start = Date.now();
