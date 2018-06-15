@@ -1,9 +1,18 @@
 {
     "name": "idle-callback",
     "version": "1.0.0",
-    "description": "Simple requestIdleCallback polyfill",
+    "description": "Strongly-typed requestIdleCallback polyfill",
     "author": "Igor Emets <ya.peren@yandex.ru>",
     "license": "MIT",
+    "keywords": [
+        "polyfill",
+        "requestIdleCallback",
+        "idle",
+        "performance",
+        "optimisation",
+        "strongly",
+        "typed"
+    ],
     "main": "./lib/index.js",
     "typings": "./lib/index.d.ts",
     "files": [
@@ -13,7 +22,7 @@
         "build": "npm run build:ts",
         "build:ts": "tsc",
         "tslint": "tslint -p tsconfig.json -c tslint.json",
-        "prettier": "prettier --write *.js **/*.js **/*.ts **/*.tsx",
+        "prettier": "prettier --write **/*.ts",
         "clean": "rm -rf lib",
         "prepack": "npm run clean && npm run build",
         "precommit": "lint-staged",
@@ -21,7 +30,7 @@
         "minor": "yarn version --new-version minor && npm publish"
     },
     "devDependencies": {
-        "@types/node": "^10.3.3",
+        "@types/node": "10.3.3",
         "prettier": "1.13.5",
         "tslint": "5.9.1",
         "tslint-config-prettier": "1.9.0",
