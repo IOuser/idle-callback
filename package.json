@@ -1,6 +1,6 @@
 {
     "name": "idle-callback",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Strongly-typed requestIdleCallback polyfill",
     "author": "Igor Emets <ya.peren@yandex.ru>",
     "license": "MIT",
