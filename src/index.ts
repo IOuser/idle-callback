@@ -12,7 +12,8 @@ export type RequestIdleCallbackOptions = {
 export type RequestIdleCallback = (fn: IdleCallback | AnyFunction, options?: RequestIdleCallbackOptions) => number;
 export type CancelIdleCallback = (id: number) => void;
 
-const ctx: any = window || global;
+// tslint:disable-next-line:no-typeof-undefined
+const ctx: any = typeof window !== 'undefined' ? window : global;
 
 export const requestIdleCallback: RequestIdleCallback = ctx.requestIdleCallback || requestIdleCallbackShim;
 export const cancelIdleCallback: CancelIdleCallback = ctx.cancelIdleCallback || ctx.clearTimeout;
