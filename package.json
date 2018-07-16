@@ -1,6 +1,6 @@
 {
     "name": "idle-callback",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Strongly-typed requestIdleCallback polyfill",
     "repository": "https://github.com/IOuser/idle-callback",
     "author": "Igor Emets <ya.peren@yandex.ru>",
